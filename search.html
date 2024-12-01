@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management - Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-6">Library Management - Search</h1>
+
+        <!-- Navigation -->
+        <div class="mb-6">
+            <a href="library-managment.html" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
+                Go to Admin Page
+            </a>
+        </div>
+
+        <!-- Search Section -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <input type="text" id="searchQuery" placeholder="Search by title or author" oninput="searchBooks()"
+                class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <!-- Book List -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Book List</h2>
+            <table class="w-full border-collapse border border-gray-300 text-left">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="p-3 border border-gray-300">ID</th>
+                        <th class="p-3 border border-gray-300">Title</th>
+                        <th class="p-3 border border-gray-300">Author</th>
+                        <th class="p-3 border border-gray-300">Copies</th>
+                        <th class="p-3 border border-gray-300">Release Date</th>
+                    </tr>
+                </thead>
+                <tbody id="searchResults"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
